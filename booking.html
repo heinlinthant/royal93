@@ -187,5 +187,18 @@
 			duration:'1500',
 			});
 		</script>
+		  <script type="text/javascript">
+
+
+	  const scriptURL = 'https://script.google.com/macros/s/AKfycbxQQo7BQdcVXZzCGLWKeDrDnu0NnWjeTvgaLeT8FZ840wz6PKYgah-KbyEVPk5waE2C/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("You have successfully submitted."))
+                .catch(error => console.error('Error!', error.message))
+            })
+  </script>
 	</body>
 </html>
