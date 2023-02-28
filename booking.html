@@ -197,7 +197,7 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("ကြိုတင် စာရင်းပေးသွင်းပြီးပါပြီ။"))
+                .then(response => location.replace())
                 .catch(error => console.error('Error!', error.message))
             })
   </script>
